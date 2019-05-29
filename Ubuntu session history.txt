@@ -1,0 +1,50 @@
+scott@ASUS-FLIP-UX360:~$ cd /mnt/c/Users/scott/source/repos
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos$ cd azure-functons-demo
+-bash: cd: azure-functons-demo: No such file or directory
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos$ cd ../azure-functions-demo
+-bash: cd: ../azure-functions-demo: No such file or directory
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos$ cd ./azure-functions-demo
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo$ cd ./CalcPi
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ ls
+CalcPi.fsx  function.json  run.fsx  sample.dat
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ fsharpi CalcPi.fsx
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ fsharpi CalcPi.fsx
+pi = 3.141661
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ fsharpc CalcPi.fsx
+F# Compiler for F# 4.0 (Open Source Edition)
+Freely distributed under the Apache 2.0 Open Source License
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ mono CalcPi.exe
+pi = 3.142021
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ mono CalcPi.exe
+pi = 3.141331
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ time mono CalcPi.exe
+pi = 3.141453
+
+real    0m6.678s
+user    0m22.844s
+sys     0m0.391s
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ time fsharpi CalcPi.fsx
+pi = 3.141415
+
+real    0m10.891s
+user    0m26.375s
+sys     0m0.703s
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ time fsharpi CalcPi.fsx
+pi = 3.141385
+
+real    0m12.340s
+user    0m27.891s
+sys     0m1.766s
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ time mono CalcPi.exe
+pi = 3.141298
+
+real    0m6.785s
+user    0m22.672s
+sys     0m0.641s
+scott@ASUS-FLIP-UX360:/mnt/c/Users/scott/source/repos/azure-functions-demo/CalcPi$ time fsharpi CalcPi.fsx
+pi = 3.141521
+Real: 00:00:07.633, CPU: 00:00:25.031, GC gen0: 851, gen1: 0
+
+real    0m10.659s
+user    0m27.516s
+sys     0m0.563s
